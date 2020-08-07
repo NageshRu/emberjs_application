@@ -1,0 +1,30 @@
+<div class='titlebox'>
+    <i><b><u>TeCh's SoLuTions</u></b></i><br>
+</div>
+
+<div class='movement'>
+    
+    <button style='background-color:#3498eb;color:black;border:none' materializeripple="" class="materialize-ripple-element materialize-button accent" ng-reflect-ng-class="materialize-button,accent," ng-reflect-ripple-duration="250" ng-reflect-is-ripple-active="true" type="button" id='back-btn' onclick='backbn()'><i>Back</i></button>
+    {{#link-to 'login'}}
+    <b style='color:red'>|</b><button style='background-color:#3498eb;color:black;border:none' materializeripple="" class="materialize-ripple-element materialize-button accent" ng-reflect-ng-class="materialize-button,accent," ng-reflect-ripple-duration="250" ng-reflect-is-ripple-active="true" type="button"><i>Login</i></button>
+    {{/link-to}}
+    <b style='color:red'>|</b><button style='background-color:#3498eb;color:black;border:none' materializeripple="" class="materialize-ripple-element materialize-button accent" ng-reflect-ng-class="materialize-button,accent," ng-reflect-ripple-duration="250" ng-reflect-is-ripple-active="true" type="button" onclick='logout()' id='logout-btn'><i>Logout</i></button>
+    <script>
+        function logout(){
+            var Backlen=history.length;   
+            history.go(-Backlen); 
+            document.getElementById('back-btn').disabled = false;  
+            window.location.href='login'; 
+        }
+        
+        function backbn(){
+            window.history.back()
+        }
+    </script>
+</div>
+
+
+
+
+
+{{outlet}}

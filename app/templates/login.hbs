@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+<div class='top'>
+    <div class='login-box'>
+        <div class='check-box'><br>
+            <input size='30' label='Email' autocomplete="none" name="" placeholder="email" type="text" id='email' /><br>
+            <li style='color:red;font-size:10pt'>*Required email</li><br>
+            <input size='30' autocomplete="none" name="" placeholder="password" type="password" id='password'/><br>
+            <li style='color:red;font-size:10pt'>*Required password</li><br><br>
+            <label style='font-size:10;color:gray'>Not your computer?Use Guest mode to sign in privately.</label>
+            <button style='border:none;background-color:white;font-size:25px;color:blue' materializeripple="" class="materialize-ripple-element materialize-button accent" ng-reflect-ng-class="materialize-button,accent," ng-reflect-ripple-duration="250" ng-reflect-is-ripple-active="true" type="button" {{action 'validate' @route 'employee'}}><i>Sign In</i></button>
+            <ul id="ulEmployeeDatas"/>
+        </div>
+    </div>
+  
+</div>
+
+
+{{outlet}}
